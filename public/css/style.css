@@ -8,14 +8,14 @@ body {
    background-image: url('https://www.bing.com/th?id=OHR.AdelaideVineyard_ROW9638552129_1920x1080.jpg&rf=LaDigue_1920x1080.jpg');
     /* background-image: url('https://www.unn.edu.ng/wp-content/uploads/2015/03/bg.jpg'); */
     /* background-image: url('https://www.bing.com/th?id=OHR.RadcliffeCamera_ROW7677887755_1920x1080.jpg&rf=LaDigue_1920x1080.jpg'); */
-    /* background-position: center;
+    background-position: center;
     background-position-x: center;
-    background-position-y: center;*/
+    background-position-y: center;
     background-size: cover; 
-    /* bottom: 0;
+    bottom: 0;
     right: 0;
     left: 0;
-    top: 0; */
+    top: 0;
     background-attachment: fixed;
 
     color:#333333;
@@ -76,4 +76,8 @@ button {
     background: #888888;
     color: white;
     padding: 8px;
+}
+
+a {
+    text-decoration: none;
 }
