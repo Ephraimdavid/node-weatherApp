@@ -5,6 +5,7 @@ const hbs = require('hbs')
 const forecastFunc = require('./utils/forecast')
 const geoCodeFunc = require('./utils/geocode')
 
+// set up a server
 const app = express()
 const port = process.env.PORT || 3000
 
@@ -21,7 +22,7 @@ hbs.registerPartials(partialPaths)
 //setup static directory to serve
 app.use(express.static(publicDir))
 
-
+// home page
 app.get( '', (req, res) => {
     res.render('index', {
         title: 'Weather App', 
@@ -29,6 +30,7 @@ app.get( '', (req, res) => {
     })
 })
 
+//about page
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About Me',
@@ -36,6 +38,7 @@ app.get('/about', (req, res) => {
     })
 }) 
 
+//help page
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help Page',
@@ -133,19 +136,5 @@ app.listen(port, () => {
 })
 
 
-// const express = require('express')
 
-
-// const app = express()
-
-
-// app.get('/', (req, res) => {
-//     res.send('Hello Nora from Earth!!')
-// })
-
-
-
-// app.listen(3000, () => {
-//     console.log('port 3000 on!!!')
-// })
-
+//2347087081208
