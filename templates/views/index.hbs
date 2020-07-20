@@ -1,27 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">>
-   
+<html lang="en">
     <head>
-         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="\img\weather.png">
-        <title>Home </title> 
+        
+        <link rel="icon" href="\img\me.png.jpg">
+        <title>Nigeria State tribe tribalism population local government area postal code mineral resources </title> 
         <link href="/css/style.css" rel="stylesheet">
     </head>
     <body>
         <div class="main-content">
-           {{>header}} 
-
-           <form>
-               <input placeholder="location" name="name">
-               <button>Submit</button>
-           </form>   
-           <p id="message-1"></p> 
-           <p id="message-2"></p>
+           {{>header}}    
+            <form>
+               <input type="text" placeholder="Find State" name="names">
+               <button>Search</button>
+           </form>
+           <div class="actions__container--spaced">
+               <p class="error"></p>
+               <p class="state"></p>
+               <p class="cap"></p>
+               <p class="create"></p>
+               <p class="pop"></p>
+               <p class="pop1"></p>
+               <p class="lg"></p>
+               <p class="zon"></p>
+               <p class="pos"></p>
+               <p class="min"></p>
+           </div>
+         <div class="li-body"></div>
+          <div class="lga"></div>
         </div>
-        
         {{>footer}}
-        <script src="/js/app.js"></script>  
-         <script src="/js/new.js"></script>  
+        <script src="/js/app.js"></script>   
     </body>
 </html>

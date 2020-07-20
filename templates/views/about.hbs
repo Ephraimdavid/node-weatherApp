@@ -3,21 +3,18 @@
  <head>
        <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="icon" href="\img\weather.png">
+     <link rel="icon" href="\img\me.png.jpg">
      <title> About</title>
      <link href="/css/style.css" rel="stylesheet">
  </head>
  <body>
      <div class="main-content">
           {{>header}}
+    <div> <h6 class="qoute">{{aboutApp}} <a href="https://state-app.herokuapp.com/states" target="_blank">Here</a></h6>  </div>
+    <div class="space-between-paragragh"></div>
      <img class="profile-pic" src="/img/me.png.jpg">
-    <P>Am Ephraim David, A Node.Js Native - Javascript upcoming wizard!!!</P>
-     {{!-- <form>
-            <input type="text" placeholder="FullName" name="fullName"> <br />
-         <input type="time" placeholder="checkIn" name="myTime"> <br />
-         <input type="date" placeholder="Date" name="myDate">
-         <button>Sign In </button>
-     </form> --}}
+    <P class="about">I'm Agbeze Obinna, A Node.Js Native, JavaScript Upcoming Wizard! - <a href="https://slug.surge.sh" target="_blank">Find Me!</a></P>
+    
      </div>
    
      {{>footer}}
