@@ -3,7 +3,7 @@
 
  //            LAND OF THE RISING SUN!
 
-
+const Tabulator = require('tabulator-tables')
 const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
@@ -54,6 +54,11 @@ app.get('/help', (req, res) => {
         helpMsg: 'Dear user, if you need any help dont fail to contact me!'
     })
 })
+
+// Nigeria States Tables
+
+
+
 
 // Nigerian States End Point!   
 app.get('/states', (req, res) => {

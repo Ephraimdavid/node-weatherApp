@@ -1,22 +1,66 @@
-// const fs = require('fs')
+const newTable = document.querySelector('.new_table')
+const button = document.querySelector('button')
+
+  // {name: 'Obinna', height: 1648, place: 'Abakaliki'}
+  const mountain = [{
+    state: 'Ebonyi',
+    Created: 1996,
+    Capital: 'Abakaliki'
+  },{
+    state: 'Abia', 
+    created: 1991,
+    Capital: 'Umuahia'
+  }]
 
 
-//check staffs consistency
-//  const time = moment()
+  const generateTableHead = (table, data) => {
+    const tHead = table.createTHead()
+    const row = tHead.insertRow()
 
-//  const setTime = time.format('MMMM Do YYYY, h:mm:ss a')
+    for ( let key of data ) {
+      let th = document.createElement('th')
+      let text =  document.createTextNode(key)
+      th.appendChild(text)
+      row.appendChild(th)
+    }
+  }
+  const table = document.querySelector('table')
+  let data = Object.keys(mountain[0])
 
-//  const savedNotes = (time) => {
-//     const notesJSON = JSON.stringify(time)
-//     fs.writeFileSync('time.json', notesJSON)
-// }
+  const generateTable = (table, data) => {
+    for (let element of data) {
+      let row = table.insertRow()
 
-//checking workers time.JS
-// document.querySelector('form').addEventListener('submit', (e) => {
-  // e.preventDefault()
-  // console.log(e.target.fullName.value)
-  // console.log(`SignedIn: ${e.target.myTime.value}`)
-  //  console.log(setTime)
-  // console.log(e.target.myDate.value)
-  // savedNotes(time)
-// })
+      for ( let key in element ) {
+        let cell = row.insertCell()
+        const text = document.createTextNode(element[key])
+        cell.appendChild(text)
+      }
+    }
+  }
+
+
+generateTable(table, mountain)
+  generateTableHead(table, data)
+
+console.log(generateTableHead(table))
+
+
+
+  // const tbl = document.createElement('table')
+  // const tblBody = document.createElement('tbody')
+
+  // for (let i = 0; i < 1; i++) {
+  //   let row = document.createElement('tr')
+
+  //   for ( let j = 0; j < 1; j++) {
+
+  //     let cell = document.createElement('td')
+  //     let cellText = document.createTextNode('State')
+
+  //     cell.appendChild(cellText)
+  //     row.appendChild(cell)
+  //   }
+  //   tblBody.appendChild(row)
+  // }
+

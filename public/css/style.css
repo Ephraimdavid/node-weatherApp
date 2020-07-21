@@ -95,8 +95,6 @@ input {
     font-weight: bold;
     font-size: .7rem;
     box-shadow:0 0 3px #1D1F26;
-    height: 65px;
-    width:50%;
     border-style: double;
     cursor: inherit; 
 }
