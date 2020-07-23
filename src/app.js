@@ -68,7 +68,7 @@ app.get('/states', (req, res) => {
             copyRight: 'Agbeze Aligbo Obinna July 2020'
         },
          {
-    officalName: 'Nigeria',
+    officalName: 'Federal Republic of Nigeria',
     Independence: 1960,
     population: '+ 180, 000, 000',
     majorTribes: ['Hausa', 'Yoruba', 'Igbo'],
