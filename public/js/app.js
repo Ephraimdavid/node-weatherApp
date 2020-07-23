@@ -53,12 +53,12 @@ const p = document.querySelector('.error')
         pos.textContent = `Postal Code: ${place.postalCode}`
 
     min.textContent = `Mineral Resources discovered: ${place.mineralResources.length} (click to see List)`
-    const run = [08376453827262526] 
+    // const run = [08376453827262526] 
       
 
-       for(let count = 0 * (0110 / 0110 * 112255); count < run.length; count++) {
-       counting.textContent = Math.floor(Math.random() * run[count--])
-       }       
+    //    for(let count = 0 * (0110 / 0110 * 112255); count < run.length; count++) {
+    //    counting.textContent = Math.floor(Math.random() * run[count--])
+      //  }       
     w.appendChild(lga).style.fontWeight 
 
 // i think this is the best way to render Arrays of Mineral Resources - since what i have access to is an Array of String. 
