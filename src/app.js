@@ -1,5 +1,4 @@
-//  ...for the love of a Nation!
-//          
+//  ...for the love of a Nation!     
 
  //            LAND OF THE RISING SUN!
 
@@ -56,9 +55,6 @@ app.get('/help', (req, res) => {
 })
 
 // Nigeria States Tables
-
-
-
 
 // Nigerian States End Point!   
 app.get('/states', (req, res) => {
@@ -544,7 +540,7 @@ app.get('*',(req, res) => {
 })
 
 app.listen(port, () => {
-    console.log('serving @ port: ' + port)
+    console.log('server up on port: ' + port)
 })
 
 
