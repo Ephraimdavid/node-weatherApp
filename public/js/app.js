@@ -4,9 +4,12 @@
           
   ...to Mum, Siblings, Ben, Collins, Obis*3, Nora
 */
+const di = document.querySelector('.myname')
+const user = document.querySelector('.mybut')
 const form = document.querySelector('form')
 const input = document.querySelector('input')
 const p = document.querySelector('.error')
+
 
 
 
@@ -22,9 +25,10 @@ const p = document.querySelector('.error')
 
     // if some condition - run some code
 
-       if (find !== String) {
-      p.textContent = 'Error! Please type any of the 36 States in Nigeria; begin with Capital Letter'
-       } 
+    //    if (find !== String) {
+        //  throw new Error('Error! Please type any of the 36 States in Nigeria; begin with Capital Letter')
+    // return p.textContent = 'Error! Please type any of the 36 States in Nigeria; begin with Capital Letter'
+    //    } 
        
        //waiting for Request
        if (place.state === find) {
@@ -92,7 +96,7 @@ const p = document.querySelector('.error')
 
       })
       
-    })
+    }).catch((err) => p.textContent = err.message)
  
 })
  

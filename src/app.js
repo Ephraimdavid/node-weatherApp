@@ -59,6 +59,10 @@ app.get('/help', (req, res) => {
 // Nigerian States End Point!   
 app.get('/states', (req, res) => {
 
+    // if (!req.body) {
+        // return res.status(400).send({error: 'please provide any of the Nigerian States!'})
+    // }
+
     res.send([
         {
             copyRight: 'Agbeze Aligbo Obinna July 2020'
