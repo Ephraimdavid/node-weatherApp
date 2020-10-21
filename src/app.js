@@ -59,8 +59,8 @@ app.get('/help', (req, res) => {
  Nigerian States End Point!  
 *      The Nigerian Govt feeds the World with Wrong info about the on going
 *       Protest. Hence, This end point takes into account the total number
-*       of Citizens killed at the time of #EndSARS protest in each state, mostly
-*       southern part of the country. updated mutiple times in a day.
+*       of Citizens killed by Security Agencies at the time of #EndSARS protest in each state, mostly
+*       southern part of the country. here is the front end. updated mutiple times in a day.
 
 */
 
@@ -247,7 +247,7 @@ app.get('/states', (req, res) => {
         population: ['2, 176, 947', '2, 880, 400'],
         endSarsProtest: {
             condition: 'Very Serious',
-            noOfVictims: 0
+            noOfVictims: 3
     },
         LGAs: ['Abakaliki', 'Afikpo North', 'Afikpo South', 'Ebonyi', 'Ezza North', 'Ezza South', 'Ikwo', 'Ishielu', 'Ivo', 'Ohaozara', 'Onicha', 'Ohaukwu', 'Izzi'],
         geoPoliticalZone: 'South East',
