@@ -10,9 +10,7 @@ const form = document.querySelector('form')
 const input = document.querySelector('input')
 const p = document.querySelector('.error')
 
-
-
-
+console.log(document)
   form.addEventListener('submit', (e) => {
     e.preventDefault()
 
@@ -25,10 +23,10 @@ const p = document.querySelector('.error')
 
     // if some condition - run some code
 
-    //    if (find !== String) {
+      //  if (find !== String) {
         //  throw new Error('Error! Please type any of the 36 States in Nigeria; begin with Capital Letter')
     // return p.textContent = 'Error! Please type any of the 36 States in Nigeria; begin with Capital Letter'
-    //    } 
+      //  } 
        
        //waiting for Request
        if (place.state === find) {
@@ -39,6 +37,8 @@ const p = document.querySelector('.error')
 
         const pop  = document.querySelector('.pop')
         const pop1 = document.querySelector('.pop1')
+        const pro = document.querySelector('.pro')
+        const pro1 = document.querySelector('.pro1')
         const lga = document.querySelector('.lg')
 
        
@@ -52,14 +52,15 @@ const p = document.querySelector('.error')
         //remove error msg and render reponse
         p.remove()
 
-        State.textContent =`State: ${place.state}`
+        State.textContent =`State ${place.state}`
         cap.textContent = `Capital: ${place.capital}`
-        create.textContent = `Year Created: ${place.creation}`
+        create.textContent = `Year Created: ${place.createdAt}`
 
         pop.textContent = `Population A: ${place.population[0]} - (2006 census) `
         pop1.textContent = `Population B: ${place.population[1]} - (2016 projection)`
-
-        zon.textContent = `Geo-Political Zone: ${place.zone}`
+        pro.textContent = `EndSars Protest Condition: ${place.endSarsProtest.condition}`
+        pro1.textContent = `No of Protest Victims: ${place.endSarsProtest.noOfVictims}`
+        zon.textContent = `Geo-Political Zone: ${place.geoPoliticalZone}`
         pos.textContent = `Postal Code: ${place.postalCode}`
 
     min.textContent = `Mineral Resources discovered: ${place.mineralResources.length} (click to see List)`
@@ -70,7 +71,7 @@ const p = document.querySelector('.error')
 // manipulating this response with 'forEach' keep on re-rendering response...
  const print = place.mineralResources.map((item) => '<p>' + item + '<p>')
        
-     const render = '<p>' + print.join(' ') + '<p>'
+     const render = '<p>' + print.join('') + '<p>'
  
      min.addEventListener('click', (e) => {
      document.write( "Refresh to go back to Home Page".fontcolor('green').fontsize('.9rem') + '<hr />' + `List of Mineral Resources in ${place.state} State` + render)
@@ -83,6 +84,7 @@ const p = document.querySelector('.error')
         const open = '<p>' + lists.join('') + '<p>'
 
       lga.addEventListener('click', () => {
+          
      if (place.state) {
         document.write( "Refresh to go back to Home Page".fontcolor('green').fontsize('.9rem') + '<hr />' + `List of Local Government Areas in ${place.state} State` + open)
         document.close()
@@ -100,3 +102,19 @@ const p = document.querySelector('.error')
  
 })
  
+
+// const increaseBirthday = () => {
+//   const count = 0
+
+
+// }
+
+
+// //getting the users age
+// const db = new Date('December 19 1995 12:12:34')
+// const timeStamp = db.getFullYear().get
+
+// const now = new Date()
+// const stamp = now.getFullYear()
+
+// const age = stamp - timeStamp

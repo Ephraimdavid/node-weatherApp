@@ -23,7 +23,7 @@ body {
     left: 0;
     top: 0;
     background-attachment: fixed;
-    color:#333333;
+    color: white;
     font-family: arial;
     max-width: 650px;
     margin: 0 auto;
@@ -68,9 +68,9 @@ header a {
 }
 
 p {
-    color: whitesmoke;
-    line-height: 5vh;
-    /* font-size: .9rem; */
+    color: white;
+    font-weight: bolder;
+    line-height:2.0;
 }
 
 
