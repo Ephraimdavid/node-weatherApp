@@ -107,7 +107,7 @@ app.get('/states', (req, res) => {
         population: ['2, 845, 380', '3, 727, 300'],
         endSarsProtest: {
             condition: 'Very Serious',
-            noOfVictims: 4
+            noOfVictims: 9
         },
         LGAs: ['Aba North', 'Aba South', 'AroChukwu', 'Bende', 'Ikwuano', 'Isiala-Ngwa North', 'Isiala-Ngwa South', 'Isuikwato', 'Obi Nwa', 'Ohafia', 'Osisioma', 'Ngwa', 'Ugwuagbo', 'Ukwa East', 'Ukwa West', 'Umuahia North', 'Umauhia North', 'Umu-Neochi'],
         geoPoliticalZone: 'south East',
@@ -149,7 +149,7 @@ app.get('/states', (req, res) => {
         population: ['4, 177, 828', '5, 527, 800'],
         endSarsProtest:{ 
             condition: 'Very Serious',
-            noOfVictims: 9
+            noOfVictims: 15
     },
         LGAs: ['Aguata', 'Anambra East', 'Anambra West', 'Anaocha', 'Awka North', 'Awka South', 'Ayamelum', 'Dunukofia', 'Ekwusigo', 'Idemili North', 'Idemili South', 'Ihiala', 'Njikoka', 'Nnewi North', 'Nnewi South', 'Ogbaru', 'Onitsha North', 'Onitsha South', 'Orumba North', 'Orumba South', 'Oyi'],
         geoPoliticalZone: 'South East',
@@ -177,7 +177,7 @@ app.get('/states', (req, res) => {
         population: ['1, 704, 515', '2, 278, 000'],
         endSarsProtest: {
             condition: 'Serious',
-            noOfVictims: 0
+            noOfVictims: 3
     },
         LGAs: ['Brass', 'Ekeremor', 'Kolokuma/Opokuma', 'Nembe', 'Ogbia', 'Sagbama', 'Southern Jaw', 'Yenegoa', 'Membe'],
         zone: 'South South',
@@ -191,7 +191,7 @@ app.get('/states', (req, res) => {
         population: ['4, 253, 641', '5, 741, 800'],
         endSarsProtest:{ 
             condition: 'Very Serious',
-            noOfVictims: 0
+            noOfVictims: 2
     },
         LGAs: ['Ado', 'Agatu', 'Apa', 'Buruku', 'Gboko', 'Guma', 'Gwer East', 'Gwer West', 'Katsina-Ala', 'Konshisha', 'Kwande', 'Logo', 'Makurdi', 'Obi', 'Ogbadibo', 'Oju', 'Okpokwu', 'Ohimini', 'Oturkpo', 'Tarka', 'Ukum', 'Ushongo', 'Vandeikya'],
         geoPoliticalZone: 'North Central',
@@ -233,7 +233,7 @@ app.get('/states', (req, res) => {
         population: ['4, 112, 445', '5, 663, 400'],
         endSarsProtest:{ 
             condition: 'Very Serious',
-            noOfVictims: 5
+            noOfVictims: 9
     },
         LGAs: ['Oshimili', 'Aniocha', 'Aniocha South', 'Ika South', 'Ika North-East', 'Ndokwa West', 'Ndokwa East', 'Isoko South', 'Isoko North', 'Bomadi', 'Burutu' , 'Ughelli South', 'Ughelli North', 'Ethiope West', 'Ethiope East', 'Sapele', 'Okpe', 'Warri North', 'Warri South', 'Uvwie', 'Udu', 'Warri Central', 'Ukwani', 'Oshimili North', 'Patani'],
         geoPoliticalZone: 'South South',
@@ -247,7 +247,7 @@ app.get('/states', (req, res) => {
         population: ['2, 176, 947', '2, 880, 400'],
         endSarsProtest: {
             condition: 'Very Serious',
-            noOfVictims: 3
+            noOfVictims: 5
     },
         LGAs: ['Abakaliki', 'Afikpo North', 'Afikpo South', 'Ebonyi', 'Ezza North', 'Ezza South', 'Ikwo', 'Ishielu', 'Ivo', 'Ohaozara', 'Onicha', 'Ohaukwu', 'Izzi'],
         geoPoliticalZone: 'South East',
@@ -430,7 +430,7 @@ app.get('/states', (req, res) => {
         population: ['9, 113, 605', '12, 550, 600'],
         endSarsProtest: {
             condition: 'Extremely Serious',
-            noOfVictims: 80
+            noOfVictims: 91
     },
         LGAs: ['Agege', 'Ajerom-Ifelodun', 'Alimosho', 'Amuwo-Odofin', 'Apapa', 'Badagry', 'Epe', 'Eti-Osa', 'Ibeju/Lekki', 'Ifako-Ijaye', 'Ikeja', 'Ikorodu', 'Kosofe', 'Lagos Island', 'Lagos Mainland', 'Mushin', 'Ojo', 'Oshodi-lsolo', 'Shomolu', 'Surulere'],
         geoPoliticalZone: 'South West',
