@@ -1,6 +1,6 @@
+//  ...for the love of a Nation!     
 
-
-
+ //            LAND OF THE RISING SUN!
 app.get('/states', (req, res) => {
     res.send({
         Nigeria: {
@@ -15,7 +15,7 @@ app.get('/states', (req, res) => {
             capital: 'Umuahia',
             creation: 1991,
             population: '',
-            LGA: '',
+            LGA: [],
             zone: 'south East'
         }
     })

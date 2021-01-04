@@ -2,6 +2,7 @@
 DAY 4 OF 100 DAYS OF CODING
         UNIX-EPOCH
 */
+
 * {
     margin:0;
     padding:0;
@@ -17,13 +18,13 @@ body {
    background-position: center;
     background-position-x: center;
     background-position-y: center;
+    background-attachment: fixed;
     background-size: cover; 
+    color: white;
     bottom: 0;
     right: 0;
     left: 0;
     top: 0;
-    background-attachment: fixed;
-    color: white;
     font-family: arial;
     max-width: 650px;
     margin: 0 auto;
@@ -180,4 +181,8 @@ footer, .about {
 
 .space-between-paragragh {
     margin-top: 50px;
+}
+
+td {
+    height: 15%
 }

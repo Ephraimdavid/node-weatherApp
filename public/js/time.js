@@ -74,6 +74,7 @@ const p = document.createElement('p')
 
 // const run = [08376453827262526] 
 
+//render the page useless by calling ifinite function
    but.addEventListener('submit', (e) => {
      e.preventDefault()
     const count = input1.value
