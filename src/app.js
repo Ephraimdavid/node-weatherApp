@@ -1,6 +1,7 @@
-//  ...for the love of a Nation!     
+/*       American Standard Code for Information Interchange  ASCII     */
 
-//            LAND OF THE RISING SUN!
+
+// we need to save our future by destroying our urgly present in the past? TENET
 
 const path = require('path')
 const express = require('express')
@@ -13,7 +14,7 @@ const geoCodeFunc = require('./utils/geocode')
 const app = express()
 const port = process.env.PORT || 3000
 
-//define paths for express config
+//define paths for express configuration
 const publicDir = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
 const partialPaths = path.join(__dirname, '../templates/partials')
@@ -26,34 +27,12 @@ hbs.registerPartials(partialPaths)
 //setup static directory to serve
 app.use(express.static(publicDir))
 
-// home page
-app.get('', (req, res) => {
-    res.render('index', {
-        title: 'Finder App',
-        name: 'Agbeze Obinna'
-    })
-})
 
+/*you don't have to believe in the govt to be a good citizen, you just have to beleive
+in your country. All we need in the government are Nationalist, nothing more, nothing less.
+Any Youth who isn't a Nationalist will still go there and mess things up
+*/
 
-//about page
-app.get('/about', (req, res) => {
-    res.render('about', {
-        title: 'About',
-        name: 'Agbeze Obinna',
-        aboutApp: 'This mini App was primarily designed to give you easy access to Information of various States in Nigeria. You can also access the API End Point'
-    })
-})
-
-//help page
-app.get('/help', (req, res) => {
-    res.render('help', {
-        title: 'Help',
-        name: 'Agbeze Obinna',
-        helpMsg: 'Dear user, if you need any help dont fail to contact me!'
-    })
-})
-
-// Nigeria States Tables
 /*
  Nigerian States End Point!  
 *    The Nigerian Govt feeds the World with Wrong info about the on going
@@ -63,8 +42,9 @@ app.get('/help', (req, res) => {
 
 */
 
-//states end-point
+//serving states end-point
 app.get('/states', (req, res) => {
+    
     try {
         res.send([
             {
@@ -76,8 +56,8 @@ app.get('/states', (req, res) => {
                 Independence: 1960,
                 population: '+ 180, 000, 000',
                 majorTribes: ['Hausa', 'Yoruba', 'Igbo'],
-                currency: ['naria', 'kobo (currently not in use)'],
-                states: 36,
+                currencies: ['naria', 'kobo (currently not in use)'],
+                noOfStates: 36,
                 capital: 'Abuja',
                 area: '923, 768.64 Square Kilometers',
                 landArea: '910, 077.00 square kilometers',
@@ -89,22 +69,18 @@ app.get('/states', (req, res) => {
                 climate: 'Humid Sub-Tropical',
                 legalSystem: 'Based on English Common Law, Islamic Law & Customary Law',
                 taxSystem: 'Biritsh Oriented',
-            },
-
-            {
                 businessHours: {
                     banks: '8.00 am - 4.00 pm (monday-friday) not all banks',
                     federalGovernmentOffices: '8.00 am - 4.00 pm (monday-friday)',
                     commercialOffices: '8.00 am - 5.00 pm (monday-friday); 9.00am - 6.00pm'
-                }
-
+                },
             }],
             {
                 state: 'Abia',
                 capital: 'Umuahia',
                 createdAt: '27th August 1991',
                 population: ['2, 845, 380', '3, 727, 300'],
-                endSarsProtest: {   //starting from the day of "TOLL-GATE SHOOTINGs" during OCT 2020 #EndSARS protest
+                endSarsProtest: {   /** starting from the day of "TOLL-GATE SHOOTINGs" during OCT 2020 #EndSARS protest **/
                     condition: 'Very Serious',
                     noOfVictims: 9
                 },
@@ -693,7 +669,7 @@ const qBank = [
         questionId: "1977"
     },
     {
-        question: "Who is the Leader of 9/11",
+        question: "Who was the Leader of 9/11",
         answers: ["Osama Bin Laden", "Alqidia", "Geroge Bush", "America Capitalist"],
         correct: "Osama Bin Laden",
         questionId: "1988"
@@ -766,12 +742,6 @@ const qBank = [
     }
 ]
 
-// serve quiz end-point
-app.get('/quiz', (req, res) => {
-    if (req.query.limit) {
-       res.send(qBank.sort(() => 0.5 - Math.random()).slice(0, req.query.limit))
-    }
-})
 
 
 //  *** string to generate from... ***
@@ -790,36 +760,72 @@ const random_word_generator = [
     'Chinue Achebe', 'princess Alexandra', 'university of Nigeria', 'benjamin ozumba', 'chief',
     'literature in English', 'things fall apart', 'ethnographic masterpiece', 'trouble with Nigeria',
     'African culture', 'encyclopaedic', 'cultural specialists', 'literary giant', 'selector',
-    'single quotes', 'double quote', 'epistemology', 'animal farm', 'man down', 'unfaithful'
+    'single quotes', 'double quote', 'epistemology', 'animal farm', 'man down', 'unfaithful',
+    'Agbeze Aligbo', 'total Nigeria', 'God Promise', 'Rhapsody Realities'
 ]
 
 // airtime to upload
 const recharge = [
-    445673542891777, 165673542321765, 125673549871788, 775673549871799, 876673522871231,
-    3356735427717111, 665674342321767, 875673588871743, 115673522871792, 988674552871765,
+    69485351513491757, 24961063985592613
 ]
 
-// we need to save our future by destroying our urgly present in the past? TENET
+
+// home page
+app.get('', (req, res) => {
+    res.render('index', {
+        title: 'Finder App',
+        name: 'Agbeze Obinna'
+    })
+})
+
+
+//about page
+app.get('/about', (req, res) => {
+    res.render('about', {
+        title: 'About',
+        name: 'Agbeze Obinna',
+        aboutApp: 'This mini App was primarily designed to give you easy access to Information of various States in Nigeria. You can also access the API End Point'
+    })
+})
+
+
+//help page
+app.get('/help', (req, res) => {
+    res.render('help', {
+        title: 'Help',
+        name: 'Agbeze Obinna',
+        helpMsg: 'Dear user, if you need any help dont fail to contact me!'
+    })
+})
+
+
+// serve quiz end-point
+// 127.0.0.1:3000/quiz?limit=Number **Number aspa key=value**
+app.get('/quiz', (req, res) => {
+    res.send(qBank.sort(() => 0.5 - Math.random()).slice(0, req.query.limit || 5))
+})
+
 
 // serving basic movement in JSON
 app.get('/puzzle', (req, res) => {
-    
     res.send({
         Word_Generator: random_word_generator.sort(() => 0.6 - Math.random()).slice(0, 1)[0]
     })
 })
 
-// once you visit the link, you are going to see a pin, try recharging the airtime, if it deosn't
-// work, refresh the page for a new pin to load. if it still doesn't work, you continue refreshing
-// until it gets to your luck. GOOD LUCK!
 
-// serving give away
-app.get('/give-away', (req, res) => {
-   res.send({airtime: recharge.sort(() => 0.5 - Math.random()).slice(0, 1)[0]})
+// serving give away aspa airtime
+// 127.0.0.1:3000/Rbank?recharge=airtime
+app.get('/Rbank', (req, res) => {
+    if (!req.query.recharge) {
+        return res.status(404).send({error: 'you are not allowed to view this information'})
+    }
+    res.send({ MTN: recharge.sort(() => 0.9 - Math.random()).slice(0, 1)[0]})
 })
 
 
 // serving biography
+// 127.0.0.1:3000/bio?personal=profile
 app.get('/bio', (req, res) => {
 
     if (!req.query.personal) {
@@ -831,17 +837,16 @@ app.get('/bio', (req, res) => {
         profile: {
             name: 'Agbeze Aligbo Obinna Ephraim David',
             age: 25,
-            likes: ['Football', 'coding','penetration testing'],
+            likes: ['Football', 'coding', 'penetration testing'],
             occupation: 'Back-End Developer (NodeJs)',
             about: 'I dont have time to check time, it is what it is. so in time, there is no time!',
-            target: 'intercept CBN API and heal the World'
-        },
-        Besties: {
-            names: ['General BN Nwankwo', 'Nora', '(JSON)', 'Ella', 'Collins', 'Ernest', 'Madukaife', 'NwankwoJr', 'Lato-Babe', 'Naria-BamBam', 'OBO', 'Chika']
+            target: 'intercept CBN API and heal the World',
+            Besties: {
+                names: ['General BN Nwankwo', 'Nora', '(JSON)', 'Ella', 'Collins', 'Ernest', 'Madukaife', 'NwankwoJr', 'Lato-Babe', 'Naria-BamBam', 'OBO', 'Chika']
+            }
         }
     })
 })
-
 
 
 // get and serve weather Api
@@ -871,11 +876,10 @@ app.get('/weather', (req, res) => {
         })
 
     })
-
-
 })
 
 
+// serve error page
 app.get('/help/*', (req, res) => {
     res.render('404', {
         title: '404 Page',
@@ -885,7 +889,7 @@ app.get('/help/*', (req, res) => {
 })
 
 
-
+// serving error while accessing wrong url
 app.get('*', (req, res) => {
     res.render('404', {
         title: '404 Page',
@@ -894,7 +898,8 @@ app.get('*', (req, res) => {
     })
 })
 
-//The server is up and running
+
+//server is up and running
 app.listen(port, () => {
     console.log('server up on port: ' + port)
 })
