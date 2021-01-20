@@ -10,109 +10,97 @@ const form = document.querySelector('form')
 const input = document.querySelector('input')
 const p = document.querySelector('.error')
 
-console.log(document)
-  form.addEventListener('submit', (e) => {
-    e.preventDefault()
+
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
 
   const find = e.target.elements.names.value
-  
-    // fetch from existing API
-      fetch('/states').then((response) => { // only 'then' do we have access to response
-        response.json().then((data) => {
-          data.filter((place) => {
 
-    // if some condition - run some code
+  // fetch from existing API - 127.0.0.1:3000/states
+  fetch('/states').then((response) => { // only 'then' do we have access to response
+    console.log(response)
+    response.json().then((data) => {
+      data.States.filter((place) => {
 
-      //  if (find !== String) {
-        //  throw new Error('Error! Please type any of the 36 States in Nigeria; begin with Capital Letter')
-    // return p.textContent = 'Error! Please type any of the 36 States in Nigeria; begin with Capital Letter'
-      //  } 
-       
-       //waiting for Request
-       if (place.state === find) {
-       
-        const State = document.querySelector('.state')
-        const create = document.querySelector('.create')
-        let counting = document.querySelector('.count')
+        // if some condition - run some code
 
-        const pop  = document.querySelector('.pop')
-        const pop1 = document.querySelector('.pop1')
-        const pro = document.querySelector('.pro')
-        const pro1 = document.querySelector('.pro1')
-        const lga = document.querySelector('.lg')
+        //waiting for Request
+        if (place.state === find) {
 
-       
-        const zon = document.querySelector('.zon')
-        const pos = document.querySelector('.pos')
-        const min = document.querySelector('.min')
-        const cap = document.querySelector('.cap')
-        const w = document.querySelector('.lga')
-        
+          const State = document.querySelector('.state')
+          const createdAt = document.querySelector('.create')
+          let counting = document.querySelector('.count')
 
-        //remove error msg and render reponse
-        p.remove()
+          const population = document.querySelector('.pop')
+          const population1 = document.querySelector('.pop1')
+          const protest = document.querySelector('.pro')
+          const protest1 = document.querySelector('.pro1')
+          const lga = document.querySelector('.lg')
 
-        State.textContent =`State ${place.state}`
-        cap.textContent = `Capital: ${place.capital}`
-        create.textContent = `Year Created: ${place.createdAt}`
 
-        pop.textContent = `Population A: ${place.population[0]} - (2006 census) `
-        pop1.textContent = `Population B: ${place.population[1]} - (2016 projection)`
-        pro.textContent = `EndSars Protest Condition: ${place.endSarsProtest.condition}`
-        pro1.textContent = `No of Protest Victims: ${place.endSarsProtest.noOfVictims}`
-        zon.textContent = `Geo-Political Zone: ${place.geoPoliticalZone}`
-        pos.textContent = `Postal Code: ${place.postalCode}`
+          const zone = document.querySelector('.zon')
+          const postalCode = document.querySelector('.pos')
+          const mineralResources = document.querySelector('.min')
+          const capital = document.querySelector('.cap')
+          const w = document.querySelector('.lga')
 
-    min.textContent = `Mineral Resources discovered: ${place.mineralResources.length} (click to see List)`
 
-    w.appendChild(lga).style.fontWeight 
+          //remove error msg and render reponse
+          p.remove()
 
-// i think this is the best way to render Arrays of Mineral Resources - since what i have access to is an Array of String. 
-// manipulating this response with 'forEach' keep on re-rendering response...
- const print = place.mineralResources.map((item) => '<p>' + item + '<p>')
-       
-     const render = '<p>' + print.join('') + '<p>'
- 
-     min.addEventListener('click', (e) => {
-     document.write( "Refresh to go back to Home Page".fontcolor('green').fontsize('.9rem') + '<hr />' + `List of Mineral Resources in ${place.state} State` + render)
-       document.close()
-      })
+          State.textContent = `State: ${place.state}`
+          capital.textContent = `Capital: ${place.capital}`
+          createdAt.textContent = `Year Created: ${place.createdAt}`
 
-      // when z is equal to v and t is < l loop and render
-        lga.textContent = `Local Goverment Areas: ${place.LGAs.length} (click to see List) `
-        const lists = place.LGAs.map((list) => '<p>' + list + '<p>')
-        const open = '<p>' + lists.join('') + '<p>'
+          population.textContent = `Population A: ${place.population._2006Census} - (2006 census) `
+          population1.textContent = `Population B: ${place.population._2016Projection} - (2016 projection)`
+          protest.textContent = `EndSars Protest Condition: ${place.endSarsProtest.condition}`
+          protest1.textContent = `No of Protest Victims: ${place.endSarsProtest.noOfVictims}`
+          zone.textContent = `Geo-Political Zone: ${place.geoPoliticalZone}`
+          postalCode.textContent = `Postal Code: ${place.postalCode}`
 
-      lga.addEventListener('click', () => {
-          
-     if (place.state) {
-        document.write( "Refresh to go back to Home Page".fontcolor('green').fontsize('.9rem') + '<hr />' + `List of Local Government Areas in ${place.state} State` + open)
-        document.close()
-      }
-      })
-         
-          } 
-          
+          mineralResources.textContent = `Mineral Resources discovered: ${place.mineralResources.length} (click to see List)`
 
-        })
+          w.appendChild(lga).style.fontWeight
+
+          // i think this is the best way to render Arrays of Mineral Resources - since what i have access to is an Array of String. 
+          // manipulating this response with 'forEach' keep on re-rendering response...
+          const print = place.mineralResources.map((item) => '<p>' + item + '<p>')
+
+          const render = '<p>' + print.join('') + '<p>'
+          mineralResources.addEventListener('click', (e) => {
+            document.write("Refresh to go back to Home Page".fontcolor('green').fontsize('.9rem') + '<hr />' + `List of Mineral Resources in ${place.state} State` + render)
+            document.close()
+          })
+
+          // when z is equal to v and t is < l loop and render
+          lga.textContent = `Local Goverment Areas: ${place.LGAs.length} (click to see List) `
+          const lists = place.LGAs.map((list) => '<p>' + list + '<p>')
+          const open = '<p>' + lists.join('') + '<p>'
+
+          lga.addEventListener('click', () => {
+            document.write("Refresh to go back to Home Page".fontcolor('green').fontsize('.9rem') + '<hr />' + `List of Local Government Areas in ${place.state} State` + open)
+            document.close()
+          })
+
+        }
+
 
       })
-      
-    }).catch((err) => p.textContent = err.message)
- 
+
+    })
+
+  }).catch((err) => p.textContent = err.message)
+
+  e.target.elements.names.value = ''
 })
- 
 
-// const increaseBirthday = () => {
-//   const count = 0
-
-
-// }
 
 
 // //getting the users age
 // const db = new Date('December 19 1995 12:12:34')
-// const timeStamp = db.getFullYear().get
+// const timeStamp = db.getFullYear()
 
 // const now = new Date()
 // const stamp = now.getFullYear()
