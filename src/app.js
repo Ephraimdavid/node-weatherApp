@@ -1,4 +1,4 @@
-/*       American Standard Code for Information Interchange  ASCII    
+/*       American Standard for Code Information Interchange  ASCII    
  
         ***    Author: Agbeze Obinna Aligbo Ephraim David     ***
     we need to save our future by destroying our urgly present in the past! TENET
@@ -49,7 +49,7 @@ Any Youth who isn't a Nationalist will still go there and mess things up
 app.get('/states', (req, res) => {
     res.send({
             author: 'Agbeze Aligbo Obinna',
-            APIdetails: ' - Nigeria State http JSON based API - © July 2020 -',
+            APIdetails: ' - Nigeria States http JSON based API - © July 2020 -',
             date: `${new Date().toLocaleDateString()} - Time: ${new Date().toLocaleTimeString()}`,
             profile: {
                 officalName: 'Federal Republic of Nigeria',
@@ -907,6 +907,13 @@ app.get('/help', (req, res) => {
 })
 
 
+app.get('/learn', (req, res) => {
+    res.render('learn', {
+        title: 'learn',
+        name: 'Agbeze Obinna'
+    })
+})
+
 // serve quiz end-point
 // 127.0.0.1:3000/quiz?limit=Number **Number aspa key=value**
 app.get('/quiz', (req, res) => {
@@ -1011,6 +1018,11 @@ app.get('*', (req, res) => {
 app.listen(port, () => {
     console.log('server up on port: ' + port)
 })
+
+
+
+
+
 
 // Oct 2020
 //me  - +2349034861410

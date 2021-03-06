@@ -19,7 +19,7 @@ form.addEventListener('submit', (e) => {
 
   // fetch from existing API - 127.0.0.1:3000/states
   fetch('/states').then((response) => { // only 'then' do we have access to response
-    console.log(response)
+    
     response.json().then((data) => {
       data.States.filter((place) => {
 
